@@ -34,7 +34,15 @@
       "Bash(PowerShell -NoProfile -Command \"Get-Content -Path '3302001022814_1.xls' -TotalCount 3 -Encoding Byte\")",
       "Read(//c/USERS/Gertrude/OneDrive - AI Technologies/Desktop/Websites/Recon/**)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git config *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(yes)",
+      "Bash(vercel project *)",
+      "Bash(vercel ls *)",
+      "Bash(git commit *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Gertrude\\.claude\\projects\\c--Users-Gertrude-OneDrive---AI-Technologies-Desktop-Websites-Recon\\memory"

@@ -40,10 +40,10 @@ Deployed on Vercel (`vercel deploy --prod`), project `ziggopay-recon` under
 the `getty-s-projects` team. Database is **Prisma Postgres**, provisioned via
 the Vercel Marketplace (`vercel integration add prisma-postgres`) — this
 auto-wired `DATABASE_URL` (+ `POSTGRES_URL` / `PRISMA_DATABASE_URL`) into the
-Vercel project's environment variables for all environments. No git repo yet;
-deploys are manual (`vercel deploy --prod` from this folder) rather than
-deploy-on-push. Connect a GitHub repo later for that — `vercel link` is
-already done, so it's just adding the Git integration in the Vercel dashboard.
+Vercel project's environment variables for all environments. Source lives at
+[github.com/Getrudetrudy01/Reconciliation](https://github.com/Getrudetrudy01/Reconciliation),
+connected to the Vercel project — pushing to `main` deploys to production
+automatically; other branches/PRs get their own preview deployment.
 
 `npm run build` runs `prisma migrate deploy` before `next build`, so every
 deploy applies any pending migrations in `prisma/migrations/` automatically —

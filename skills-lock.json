@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "prisma-orm-setup": {
+      "source": "prisma/skills",
+      "sourceType": "github",
+      "skillPath": "prisma-orm-setup/SKILL.md",
+      "computedHash": "af5046146c37652728b428b6a3b14d8f33cded97007644840cf9bf20a5194b5a"
+    },
+    "prisma-postgres-setup": {
+      "source": "prisma/skills",
+      "sourceType": "github",
+      "skillPath": "prisma-postgres-setup/SKILL.md",
+      "computedHash": "890e1b0e61d466ba16e6a663c550a780522ad05437681f1019f74afa58e2d21b"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+node_modules
+.next
+out
+build
+*.log
+.DS_Store
+
+# local env + sqlite db
+.env
+prisma/dev.db
+prisma/dev.db-journal
+
+.vercel
+.env*
+
+# Real customer/transaction test files dropped in the project root during
+# development — never commit these (names, phone numbers, real amounts).
+# The synthetic fixtures in samples/ are unaffected (not root-scoped).
+/*.csv
+/*.xls
+/*.xlsx
+/*.html

@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ReconciliationRun {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  /// Which engine produced this run: GTBANK (ledger CSV vs GTBank statement
+  /// CSV) or ZIGGOPAY_IMTO (ZiggoPay vs IMTO, Excel). Drives which bucket
+  /// taxonomy the results view uses — see src/lib/types.ts TAXONOMIES.
+  kind            String   @default("GTBANK")
+  ledgerFileName  String
+  bankFileName    String
+  statementPeriod String?
+  feeAmount       Float
+  tolerance       Float
+  totalLedgerRows Int
+  matchedCount    Int
+  mismatchedCount Int
+  flaggedCount    Int
+  runBy           String?
+  rows            ReconciliationRow[]
+}
+
+model ReconciliationRow {
+  id                  String @id @default(cuid())
+  runId               String
+  run                 ReconciliationRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  bucket              String // Matched, Mismatched, ReversedFlagged, ReversedExpected, LedgerOnly, BankOnly, FailedExcluded, BankCharges
+  date                String?
+  walletTransactionId String?
+  transactionId       String?
+  customerName        String?
+  ledgerAmount        Float?
+  bankDebit           Float?
+  diff                Float?
+  reason              String?
+
+  // Exception workflow (added for the "Now" roadmap phase — see
+  // docs/reconciliation-platforms-research.md). Only meaningful for
+  // actionable buckets (Mismatched, ReversedFlagged, LedgerOnly, BankOnly);
+  // left at its default elsewhere.
+  status         String    @default("Open") // Open | Investigating | Resolved
+  resolutionNote String?
+  resolvedBy     String?
+  resolvedAt     DateTime?
+
+  @@index([runId])
+  @@index([transactionId])
+}
+
+model Settings {
+  id        String @id @default("default")
+  feeAmount Float  @default(0.50)
+  tolerance Float  @default(0.02)
+}

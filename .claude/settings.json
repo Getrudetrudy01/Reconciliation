@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npm run *)",
+      "Bash(npx tsx *)",
+      "Bash(BASE=http://localhost:3000 npx tsx scripts/test-save.ts)",
+      "Bash(BASE=http://localhost:3000 npx tsx scripts/test-exception.ts)",
+      "Bash(grep -o 'Flagged[^\"<]*' __TRACKED_VAR__/detail.html)",
+      "Read(//c/Users/Gertrude/.claude/projects/c--Users-Gertrude-OneDrive---AI-Technologies-Desktop-Websites-Recon/memory/**)",
+      "Bash(cd \"C:\\\\Users\\\\Gertrude\\\\OneDrive - AI Technologies\\\\Desktop\\\\Websites\\\\Recon\" && ls -la 2>/dev/null; echo \"--- Desktop ---\"; ls -la \"C:\\\\Users\\\\Gertrude\\\\OneDrive - AI Technologies\\\\Desktop\" 2>/dev/null | head -30; echo \"--- Downloads ---\"; ls -la \"C:\\\\Users\\\\Gertrude\\\\Downloads\" 2>/dev/null | head -30)",
+      "Read(//c/Users/Gertrude/OneDrive - AI Technologies/Desktop/**)",
+      "Read(//c/Users/Gertrude/Downloads/**)",
+      "Read(//c/Users/Gertrude/OneDrive - AI Technologies/**)",
+      "Read(//c/Users/Gertrude/Desktop/**)",
+      "Bash(ls -la \"C:\\\\Users\\\\Gertrude\\\\Downloads\\\\ZiggoPay-IMTO.xlsx\")",
+      "Bash(python3 -c \"import openpyxl; print\\('openpyxl ok'\\)\")",
+      "Bash(python3 -c \"import pandas; print\\('pandas ok'\\)\")",
+      "Bash(python -c \"import openpyxl; print\\('openpyxl ok'\\)\")",
+      "Bash(python -c \"import pandas; print\\('pandas ok'\\)\")",
+      "Bash(python -)",
+      "Bash(npx prisma *)",
+      "Bash(node -e ' *)",
+      "Bash(rm -rf .next)",
+      "Bash(FILE=\"C:\\\\Users\\\\Gertrude\\\\Downloads\\\\ZiggoPay-IMTO.xlsx\" npx tsx scripts/test-imto-audit.ts)",
+      "Bash(FILE=\"C:\\\\Users\\\\Gertrude\\\\Downloads\\\\ZiggoPay-IMTO.xlsx\" npx tsx scripts/test-imto.ts)",
+      "Bash(vercel integration *)",
+      "Bash(vercel link *)",
+      "Bash(BASE=http://localhost:3000 npx tsx scripts/seed-runs.ts)",
+      "Bash(vercel deploy *)",
+      "Bash(curl -s https://ziggopay-recon.vercel.app/api/settings)",
+      "Bash(vercel git *)",
+      "Bash(vercel --help)",
+      "Bash(PowerShell -NoProfile -Command \"Get-Content -Path '3302001022814_1.xls' -TotalCount 3 -Encoding Byte\")",
+      "Read(//c/USERS/Gertrude/OneDrive - AI Technologies/Desktop/Websites/Recon/**)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Gertrude\\.claude\\projects\\c--Users-Gertrude-OneDrive---AI-Technologies-Desktop-Websites-Recon\\memory"
+    ]
+  }
+}
